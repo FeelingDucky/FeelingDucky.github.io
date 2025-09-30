@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>David the Duck</title>
+  <link rel="preload" as="style" href="css/style.min.css" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/style.min.css"></noscript>
+  <meta name="description" content="Needing a chill pill">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.png" type="image/png" sizes="64x64">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#f7ede2">
+  <style>
+    body {
+      background-color: #f7ede2;
+    }
+    img {
+      width: clamp(150px, 50vw, 350px); /* min, preferred, max */
+      height: auto;
+      display: block;
+    }
+    .hello-box {
+      font-weight: 600;
+      font-size: 2rem;
+      color: #000;
+      opacity: 0;                         /* start hidden */
+      transform: translateY(8px);
+      animation: fadeIn 600ms ease-out 1s forwards; /* 2s delay */
+      font-family: cursive;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(0); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="hello-box">Quack! Quack!</div>
+    <picture>
+      <source srcset="img/david.webp" type="image/webp">
+      <img src="img/david.png" alt="Image of David the Duck waving hello">
+    </picture>
+  </div>
+</body>
+
+</html>
